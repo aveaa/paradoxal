@@ -1,6 +1,6 @@
    const Discord = require('discord.js');
     const client = new Discord.Client();
-    let p = 'b!';
+    let p = '!';
     let c = '#f40000';
     // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
@@ -17,7 +17,7 @@
 
     client.on('message', async message => {
           
-        if (message.content.startsWith(`${p}avatar`)) {
+        if (message.content.startsWith(`${p}аватар`)) {
             let userok = message.mentions.users.first();
             if (!userok)
                 userok = message.author;    
@@ -29,7 +29,7 @@
             await message.channel.send(embed);
             message.react("✅");
         }
-                if (message.content.startsWith(`${p}hug`)) {
+                if (message.content.startsWith(`${p}обнять`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         let userok = message.mentions.users.first();
@@ -44,7 +44,7 @@
             message.react("✅");
         }
         
-                        if (message.content.startsWith(`${p}smug`)) {
+                        if (message.content.startsWith(`${p}самолюбование`)) {
         let page = await r.get('https://nekos.life/api/v2/img/smug')
                     
         const embed = new Discord.RichEmbed()
@@ -55,7 +55,7 @@
             message.react("✅");
         }
         
-                                if (message.content.startsWith(`${p}pat`)) {
+                                if (message.content.startsWith(`${p}погладить`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/pat')
         let userok = message.mentions.users.first();
@@ -70,7 +70,7 @@
             message.react("✅");
         }
         
-                        if (message.content.startsWith(`${p}slap`)) {
+                        if (message.content.startsWith(`${p}ударить`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/slap')
         let userok = message.mentions.users.first();
@@ -86,7 +86,7 @@
         }
         
         // 18+
-                                if (message.content.startsWith(`${p}hentai`)) {
+                                if (message.content.startsWith(`${p}хентай`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
@@ -105,7 +105,7 @@
             message.react("✅");
         }
         
-                                        if (message.content.startsWith(`${p}ero`)) {
+                                        if (message.content.startsWith(`${p}эротика`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
@@ -124,7 +124,7 @@
             message.react("✅");
         }
         
-                                        if (message.content.startsWith(`${p}anal`)) {
+                                        if (message.content.startsWith(`${p}анал`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
@@ -143,7 +143,7 @@
             message.react("✅");
         }
         
-                                        if (message.content.startsWith(`${p}trap`)) {
+                                        if (message.content.startsWith(`${p}трап`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
@@ -162,7 +162,7 @@
             message.react("✅");
         }
         
-                                        if (message.content.startsWith(`${p}tits`)) {
+                                        if (message.content.startsWith(`${p}грудь`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
@@ -181,7 +181,7 @@
             message.react("✅");
         }
         
-                                        if (message.content.startsWith(`${p}pussy`)) {
+                                        if (message.content.startsWith(`${p}пусси`)) {
                                     const embederr = new Discord.RichEmbed()
                                     .setDescription("У канала нету метки ``NSFW``")
                                     .setColor(c);
