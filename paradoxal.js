@@ -84,11 +84,25 @@
             await message.channel.send(embed);
             message.react("✅");
         }
+                         if (message.content.startsWith(`${p}поцеловать`)) {
+                let r = require('snekfetch')
+        let page = await r.get('https://nekos.life/api/v2/img/kiss')
+        let userok = message.mentions.users.first();
+        if(!userok) 
+           userok = message.author;
+                    
+        const embed = new Discord.RichEmbed()
+            .setDescription(`${message.author} поцеловал ${userok}. 💙`)
+            .setImage(`${page.body.url}`)
+            .setColor(c);
+            await message.channel.send(embed);
+            message.react("✅");
+        }
         
         // 18+
                                 if (message.content.startsWith(`${p}хентай`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -107,7 +121,7 @@
         
                                         if (message.content.startsWith(`${p}эротика`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -126,7 +140,7 @@
         
                                         if (message.content.startsWith(`${p}анал`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -145,7 +159,7 @@
         
                                         if (message.content.startsWith(`${p}трап`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -164,7 +178,7 @@
         
                                         if (message.content.startsWith(`${p}грудь`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -183,7 +197,7 @@
         
                                         if (message.content.startsWith(`${p}пусси`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У канала нету метки ``NSFW``")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
