@@ -34,10 +34,10 @@
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         let userok = message.mentions.users.first();
         if(!userok) 
-           userok = message.author;
+           userok = "себя";
                     
         const embed = new Discord.RichEmbed()
-            .setDescription(`${message.author} обнялся с ${userok}. ﾟωﾟﾉ`)
+            .setDescription(`${message.author} обнял ${userok}. ﾟωﾟﾉ`)
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
@@ -60,7 +60,7 @@
         let page = await r.get('https://nekos.life/api/v2/img/pat')
         let userok = message.mentions.users.first();
         if(!userok) 
-           userok = message.author;
+           userok = "себя";
                     
         const embed = new Discord.RichEmbed()
             .setDescription(message.author + " погладил " + userok + ".(っ´ω`c)")
@@ -75,7 +75,7 @@
         let page = await r.get('https://nekos.life/api/v2/img/slap')
         let userok = message.mentions.users.first();
         if(!userok) 
-           userok = message.author;
+           userok = "себя";
                     
         const embed = new Discord.RichEmbed()
             .setDescription(`${message.author} ударил ${userok}. (ﾟΘﾟ)`)
@@ -89,7 +89,7 @@
         let page = await r.get('https://nekos.life/api/v2/img/kiss')
         let userok = message.mentions.users.first();
         if(!userok) 
-           userok = message.author;
+           userok = "себя";
                     
         const embed = new Discord.RichEmbed()
             .setDescription(`${message.author} поцеловал ${userok}. 💙`)
