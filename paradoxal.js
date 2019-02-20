@@ -215,21 +215,22 @@
             await message.channel.send(embed);
             message.delete()
         }
-                                           if (message.content.startsWith(`${p}порнгиф`)) {
-                                    const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
-                                    .setColor(c);
-                        	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
-                                message.react("❌")
-                                }
-                                    
-                                                      request('https://nekobot.xyz/api/image?type=pgif', function (error, response, body) {
-            let arr = JSON.parse(body);
-                                                         const embed = new Discord.RichEmbed()
-                                                         .setImage(arr["message"])
-                                                         .setColor(c)
-            message.channel.send(embed)
-        })
-                                              }
+        
+       if (message.content.startsWith(`${p}порнгиф`)) {
+    const embederr = new Discord.RichEmbed()
+         .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в #nsfw")
+         .setColor(c);
+    if(message.channel.nsfw === false) {
+         message.channel.send(embederr);
+         message.react("❌") 
+    } else {
+request('https://nekobot.xyz/api/image?type=pgif', function (error, response, body) {
+let arr = JSON.parse(body); 
+const embed = new Discord.RichEmbed() 
+.setImage(arr["message"])
+.setColor(c)
+ message.channel.send(embed) 
+   message.delete()
+}) }
+}
     });
