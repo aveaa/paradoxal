@@ -27,7 +27,7 @@
                 .setImage(`${userok.avatarURL}`)
                 .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete();
         }
                 if (message.content.startsWith(`${p}обнять`)) {
         let r = require('snekfetch')
@@ -41,7 +41,8 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete();
+                   
         }
         
                         if (message.content.startsWith(`${p}самолюбование`)) {
@@ -67,7 +68,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete();
         }
         
                         if (message.content.startsWith(`${p}ударить`)) {
@@ -82,7 +83,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete();
         }
                          if (message.content.startsWith(`${p}поцеловать`)) {
                 let r = require('snekfetch')
@@ -96,7 +97,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete():
         }
         
         // 18+
@@ -116,7 +117,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
         
                                         if (message.content.startsWith(`${p}эротика`)) {
@@ -135,7 +136,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
         
                                         if (message.content.startsWith(`${p}анал`)) {
@@ -144,7 +145,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -154,7 +155,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
         
                                         if (message.content.startsWith(`${p}трап`)) {
@@ -173,7 +174,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
         
                                         if (message.content.startsWith(`${p}грудь`)) {
@@ -192,7 +193,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
         
                                         if (message.content.startsWith(`${p}пусси`)) {
@@ -211,6 +212,6 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.react("✅");
+            message.delete()
         }
     });
