@@ -1,5 +1,5 @@
    const Discord = require('discord.js');
-   const request = require(request);
+   const request = require(request)
     const client = new Discord.Client();
     let p = '!';
     let c = "#a142f4";
