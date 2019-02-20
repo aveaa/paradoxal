@@ -3,6 +3,7 @@
     const client = new Discord.Client();
     let p = '!';
     let c = "#a142f4";
+    let nsfw = "<#544133935089713167>"
     // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
     client.on('ready', () => {
@@ -104,7 +105,7 @@
         // 18+
                                 if (message.content.startsWith(`${p}хентай`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -123,7 +124,7 @@
         
                                         if (message.content.startsWith(`${p}эротика`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -142,7 +143,7 @@
         
                                         if (message.content.startsWith(`${p}анал`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -161,7 +162,7 @@
         
                                         if (message.content.startsWith(`${p}трап`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -180,7 +181,7 @@
         
                                         if (message.content.startsWith(`${p}грудь`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -199,7 +200,7 @@
         
                                         if (message.content.startsWith(`${p}пусси`)) {
                                     const embederr = new Discord.RichEmbed()
-                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в <#544133935089713167>")
+                                    .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в " + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr);
@@ -218,7 +219,7 @@
         
        if (message.content.startsWith(`${p}порнгиф`)) {
     const embederr = new Discord.RichEmbed()
-         .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите в #nsfw")
+         .setDescription("У данного канала нету метки ``NSFW``. Для использования команды перейдите " + nsfw)
          .setColor(c);
     if(message.channel.nsfw === false) {
          message.channel.send(embederr);
