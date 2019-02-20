@@ -97,7 +97,7 @@
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
-            message.delete():
+            message.delete();
         }
         
         // 18+
