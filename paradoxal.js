@@ -1,7 +1,7 @@
    const Discord = require('discord.js');
     const client = new Discord.Client();
     let p = '!';
-    let c = '#f40000';
+    let c = "#a142f4";
     // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
     client.on('ready', () => {
