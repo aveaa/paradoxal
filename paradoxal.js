@@ -48,7 +48,7 @@
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
            .setColor(c)
-           return message.channel.send(err_embed)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
            }
                     
         const embed = new Discord.RichEmbed()
@@ -71,7 +71,7 @@
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
            .setColor(c)
-           return message.channel.send(err_embed)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
            }
                     
         const embed = new Discord.RichEmbed()
@@ -94,7 +94,7 @@
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
            .setColor(c)
-           return message.channel.send(err_embed)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
            }
                     
         const embed = new Discord.RichEmbed()
@@ -117,7 +117,7 @@
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
            .setColor(c)
-           return message.channel.send(err_embed)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
            }
                     
         const embed = new Discord.RichEmbed()
@@ -136,7 +136,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.react("❌")
                                 }
                                     
@@ -155,7 +155,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.react("❌")
                                 }
                                     
@@ -174,7 +174,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.delete()
                                 }
                                     
@@ -193,7 +193,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.react("❌")
                                 }
                                     
@@ -212,7 +212,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.react("❌")
                                 }
                                     
@@ -231,7 +231,7 @@
                                     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
-                                return message.channel.send(embederr);
+                                return message.channel.send(embederr).then(msg => msg.delete(5000))
                                 message.react("❌")
                                 }
                                     
@@ -250,7 +250,7 @@
          .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
          .setColor(c);
     if(message.channel.nsfw === false) {
-         message.channel.send(embederr);
+         message.channel.send(embederr).then(msg => msg.delete(5000))
          message.react("❌") 
     } else {
 request('https://nekobot.xyz/api/image?type=pgif', function (error, response, body) {
