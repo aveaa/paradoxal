@@ -4,6 +4,12 @@
     let p = '!';
     let c = "#a142f4";
     let nsfw = "<#544133935089713167>"
+    
+    const emojis = {
+    yes:'548538686237704202',
+    no:'548538689572175902'
+    }
+
     // 0 - Играть, 1 - Стримить, 2 - Слушать, 3 - Смотреть
 
     client.on('ready', () => {
@@ -25,7 +31,7 @@
                 userok = message.author;    
 
             const embed = new Discord.RichEmbed()
-                .setDescription(`Аватар пользователя ${userok}`)
+                .setDescription(`${client.emojis.get(emojis.yes)} Аватар пользователя ${userok}`)
                 .setImage(`${userok.avatarURL}`)
                 .setColor(c);
             await message.channel.send(embed);
@@ -35,11 +41,12 @@
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         let userok = message.mentions.users.first();
+        let description = `${message.author} обнял ${userok}`
         if(!userok) 
-           userok = "себя";
+           description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!обнять @пользователь``"
                     
         const embed = new Discord.RichEmbed()
-            .setDescription(`${message.author} обнял ${userok}. ﾟωﾟﾉ`)
+            .setDescription(description)
             .setImage(`${page.body.url}`)
             .setColor(c);
             await message.channel.send(embed);
