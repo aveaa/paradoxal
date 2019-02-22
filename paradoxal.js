@@ -42,8 +42,14 @@
         let page = await r.get('https://nekos.life/api/v2/img/hug')
         let userok = message.mentions.users.first();
         let description = `${message.author} обнял ${userok}`
-        if(!userok) 
-           description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!обнять @пользователь``"
+        if(!userok) {
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!обнять @пользователь``"
+           
+           const err_embed = new Discord.RichEmbed()
+           .setDescription(error_description)
+           .setColor(c)
+           await message.channel.send(err_description)
+           }
                     
         const embed = new Discord.RichEmbed()
             .setDescription(description)
