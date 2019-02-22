@@ -1,7 +1,7 @@
    const Discord = require('discord.js');
    const request = require('request');
     const client = new Discord.Client();
-    let p = '!';
+    let p = '.';
     let c = "#a142f4";
     let nsfw = "<#544133935089713167>"
     
