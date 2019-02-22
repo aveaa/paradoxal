@@ -43,7 +43,7 @@
         let userok = message.mentions.users.first();
         let description = `${message.author} обнял ${userok}`
         if(!userok) {
-           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!обнять @пользователь``"
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.обнять @пользователь``"
            
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
@@ -60,14 +60,39 @@
             message.delete();
                    
         }
-        
+
+                       if (message.content.startsWith(`${p}тыкнуть`)) {
+        let r = require('snekfetch')
+        let page = await r.get('https://nekos.life/api/v2/img/poke')
+        let userok = message.mentions.users.first();
+        let description = `${message.author} тыкнул в ${userok}`
+        if(!userok) {
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.тыкнуть @пользователь``"
+           
+           const err_embed = new Discord.RichEmbed()
+           .setDescription(error_description)
+           .setColor(c)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
+           }
+                    
+        const embed = new Discord.RichEmbed()
+            .setDescription(description)
+            .setImage(`${page.body.url}`)
+            .setColor(c);
+            await message.channel.send(embed);
+            message.delete();
+                   
+        }
+
+       
                 if (message.content.startsWith(`${p}погладить`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/pat')
         let userok = message.mentions.users.first();
         let description = `${message.author} погладил ${userok}`
         if(!userok) {
-           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!погладить @пользователь``"
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.погладить @пользователь``"
            
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
@@ -91,7 +116,7 @@
         let userok = message.mentions.users.first();
         let description = `${message.author} ударил ${userok}`
         if(!userok) {
-           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!ударить @пользователь``"
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.ударить @пользователь``"
            
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
@@ -115,7 +140,7 @@
         let userok = message.mentions.users.first();
         let description = `${message.author} обнял ${userok}`
         if(!userok) {
-           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``!поцеловать @пользователь``"
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.поцеловать @пользователь``"
            
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
