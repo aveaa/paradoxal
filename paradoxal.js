@@ -48,7 +48,7 @@
            const err_embed = new Discord.RichEmbed()
            .setDescription(error_description)
            .setColor(c)
-           await message.channel.send(err_description)
+           await message.channel.send(err_embed)
            }
                     
         const embed = new Discord.RichEmbed()
