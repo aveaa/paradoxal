@@ -247,7 +247,7 @@
         
        if (message.content.startsWith(`${p}порнгиф`)) {
     const embederr = new Discord.RichEmbed()
-         .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите  + nsfw)
+         .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
          .setColor(c);
     if(message.channel.nsfw === false) {
          message.channel.send(embederr);
