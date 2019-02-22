@@ -49,6 +49,7 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
            }
                     
         const embed = new Discord.RichEmbed()
@@ -72,6 +73,7 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
            }
                     
         const embed = new Discord.RichEmbed()
@@ -95,6 +97,7 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
            }
                     
         const embed = new Discord.RichEmbed()
@@ -118,6 +121,7 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
            }
                     
         const embed = new Discord.RichEmbed()
@@ -137,7 +141,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr).then(msg => msg.delete(5000))
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -156,7 +160,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr).then(msg => msg.delete(5000))
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -194,7 +198,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr).then(msg => msg.delete(5000))
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -213,7 +217,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr).then(msg => msg.delete(5000))
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -232,7 +236,7 @@
                                     .setColor(c);
                         	if(!message.channel.nsfw) {
                                 return message.channel.send(embederr).then(msg => msg.delete(5000))
-                                message.react("❌")
+                                message.delete()
                                 }
                                     
         let r = require('snekfetch')
@@ -251,7 +255,7 @@
          .setColor(c);
     if(message.channel.nsfw === false) {
          message.channel.send(embederr).then(msg => msg.delete(5000))
-         message.react("❌") 
+         message.delete()
     } else {
 request('https://nekobot.xyz/api/image?type=pgif', function (error, response, body) {
 let arr = JSON.parse(body); 
