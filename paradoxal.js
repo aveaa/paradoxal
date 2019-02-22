@@ -52,6 +52,35 @@
            message.delete()
            }
                     
+                                   if (message.content.startsWith(`${p}щекотать`)) {
+        let r = require('snekfetch')
+        let page = await r.get('https://nekos.life/api/v2/img/tickle')
+        let userok = message.mentions.users.first();
+        let description = `${message.author} пощекотал ${userok}`
+        if(!userok) {
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.щекотать @пользователь``"
+           
+           const err_embed = new Discord.RichEmbed()
+           .setDescription(error_description)
+           .setColor(c)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
+           }
+                                                      if (message.content.startsWith(`${p}покормить`)) {
+        let r = require('snekfetch')
+        let page = await r.get('https://nekos.life/api/v2/img/feed')
+        let userok = message.mentions.users.first();
+        let description = `${message.author} покормил ${userok}`
+        if(!userok) {
+           error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.покормить @пользователь``"
+           
+           const err_embed = new Discord.RichEmbed()
+           .setDescription(error_description)
+           .setColor(c)
+           return message.channel.send(err_embed).then(msg => msg.delete(5000))
+           message.delete()
+           }
+                   
         const embed = new Discord.RichEmbed()
             .setDescription(description)
             .setImage(`${page.body.url}`)
