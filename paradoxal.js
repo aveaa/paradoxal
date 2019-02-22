@@ -51,7 +51,6 @@
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
            message.delete()
            }
-                    
                                    if (message.content.startsWith(`${p}щекотать`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/tickle')
