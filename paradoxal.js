@@ -65,6 +65,16 @@
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
            message.delete()
            }
+               
+                    const embed = new Discord.RichEmbed()
+            .setDescription(description)
+            .setImage(`${page.body.url}`)
+            .setColor(c);
+            await message.channel.send(embed);
+            message.delete();
+                   
+        }
+                          
                                                       if (message.content.startsWith(`${p}покормить`)) {
         let r = require('snekfetch')
         let page = await r.get('https://nekos.life/api/v2/img/feed')
