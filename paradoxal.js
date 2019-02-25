@@ -52,14 +52,6 @@
            message.delete()
            }
                    
-        if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете обнять себя.\n\nИспользуйте:\n``.обнять @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                   
                            const embed = new Discord.RichEmbed()
             .setDescription(description)
             .setImage(`${page.body.url}`)
@@ -81,14 +73,6 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                                      
-                                              if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете щекотать себя.\n\nИспользуйте:\n``.щекотать @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
            message.delete()
            }
                
@@ -115,14 +99,6 @@
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
            message.delete()
            }
-                                                         
-          if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете покормить себя.\n\nИспользуйте:\n``.покормить @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
-           message.delete()
-           }                                                       
                    
         const embed = new Discord.RichEmbed()
             .setDescription(description)
@@ -147,15 +123,7 @@
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
            message.delete()
            }
-
-                                  if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете тыкнуть в  себя.\n\nИспользуйте:\n``.тыкнуть @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                          
+                    
         const embed = new Discord.RichEmbed()
             .setDescription(description)
             .setImage(`${page.body.url}`)
@@ -178,14 +146,6 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                   
-                           if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете погладить себя.\n\nИспользуйте:\n``.погладить @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
            message.delete()
            }
                     
@@ -213,14 +173,6 @@
            message.delete()
            }
                     
-                            if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете ударить себя.\n\nИспользуйте:\n``.ударить @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                    
         const embed = new Discord.RichEmbed()
             .setDescription(description)
             .setImage(`${page.body.url}`)
@@ -242,14 +194,6 @@
            .setDescription(error_description)
            .setColor(c)
            return message.channel.send(err_embed).then(msg => msg.delete(5000))
-           message.delete()
-           }
-                   
-                           if(userok = message.author) {
-           const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете поцеловать себя.\n\nИспользуйте:\n``.поцеловать @пользователь``")
-           .setColor(c)
-           return message.channel.send(membed).then(msg => msg.delete(5000))
            message.delete()
            }
                     
