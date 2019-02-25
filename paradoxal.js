@@ -54,7 +54,7 @@
                    
         if(userok = message.author) {
            const membed = new Discord.RichEmbed()
-           .setDescription(client.emojis.get(emojis.no) + "Вы не можете обнять себя.\n\nИспользуйте:\n``.обнять @пользователь``)
+           .setDescription(client.emojis.get(emojis.no) + "Вы не можете обнять себя.\n\nИспользуйте:\n``.обнять @пользователь``")
            .setColor(c)
            return message.channel.send(membed).then(msg => msg.delete(5000))
            message.delete()
