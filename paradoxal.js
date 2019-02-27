@@ -16,6 +16,17 @@
         console.log('Бот успешно запущен!');
     });
 
+
+// Ивент при запуске бота 👤
+client.on('ready', () => {
+    console.log('Бот успешно запущен!');
+    function randomStatus() {
+        let status = [`за Paradoxal`, `.help`, client.guilds.get('544082820621139968').memberCount + ` участников`, `идем к 100 участникам`];
+        let rstatus = Math.floor(Math.random() * status.length);
+        client.user.setActivity(status[rstatus], {type: 3});
+ }; setInterval(randomStatus, 10000)
+});
+
     client.login(process.env.TOKEN);
 
     client.on('message', message => {
