@@ -37,7 +37,9 @@ const emojis = {
 
 // Ивент при запуске бота 👤
 client.on('ready', () => {
-    console.log('✔ Бот успешно запущен');
+    console.log('//--------------------//');
+    console.log(' ');
+    console.log('Бот успешно запущен');
     console.log(' ');
     console.log('Информация о боте:');
     console.log('Авторизация: ' + client.user.tag);
@@ -45,6 +47,7 @@ client.on('ready', () => {
     console.log(' ');
     console.log('Бот написан специально для сервера "Paradoxal"');
     console.log(' ');
+    console.log('//--------------------//');
     function randomStatus() {
         let status = [`за Paradoxal`, `.help`, client.guilds.get('544082820621139968').memberCount + ` участников`, `идем к 100 участникам`];
         let rstatus = Math.floor(Math.random() * status.length);
