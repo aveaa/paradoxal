@@ -49,7 +49,7 @@ client.on('ready', () => {
     console.log(' ');
     console.log('//--------------------//');
     function randomStatus() {
-        let status = [`за Paradoxal`, `.help`, client.guilds.get('544082820621139968').memberCount + ` участников`, `идем к 100 участникам`];
+        let status = [`за Paradoxal`, `.help`, client.guilds.get('544082820621139968').memberCount + ` участников`, `идем к 200 участникам`];
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 3});
  }; setInterval(randomStatus, 10000)
@@ -83,7 +83,6 @@ if (message.content.startsWith(p + 'help')) {
     .addField("Эмоции", "``.обнять``, ``.ударить``, ``.поцеловать``, ``.погладить``, ``.тыкнуть``, ``.щекотать``, ``.покормить``")
     .addField("Другое", "``.аватар``")
     .addField("18+", "``.порнгиф``, ``.хентай``, ``.пусси``, ``.грудь``, ``.трап``, ``.анал``, ``.эротика``")
-    .addField("Модерация", "``.mute``, ``.unmute``")
     .setColor(c)
     .setThumbnail("https://img.icons8.com/nolan/96/000000/help.png")
     message.channel.send(embed);
