@@ -1,11 +1,35 @@
-   const Discord = require('discord.js');
-   const request = require('request');
-    const client = new Discord.Client();
-    let p = '.';
-    let c = "#a142f4";
-    let nsfw = "<#544133935089713167>"
-    
-    const emojis = {
+/* 
+* ----------------------------------------------
+* 
+*
+*
+*
+*
+* Бот, созданный специально для сервера Paradoxal 
+* Библиотеки | Discord.js | Request
+* Ссылка на дискорд | https://discord.gg/9gAxxx
+* Разрешается использовать на вашем сервере
+*
+*
+*
+*
+* ----------------------------------------------
+*/
+
+// Библиотеки
+const Discord = require('discord.js');
+const request = require('request');
+
+// Клиент
+const client  = new Discord.Client();
+
+// Конфиг
+let p    = '.';
+let c    = "#a142f4";
+let nsfw = "<#544133935089713167>"
+  
+// Глобальные эмодзи
+const emojis = {
     yes:'548538686237704202',
     no:'548538689572175902'
     }
