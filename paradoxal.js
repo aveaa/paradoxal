@@ -77,6 +77,39 @@ client.login(process.env.TOKEN);
         const args = message.content.slice(p.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
           
+if (command == 'eval') && message.author.id == "341988428457705482" {
+  // Эмбед .-.
+  const noeval = new Discord.RichEmbed()
+  
+   let code = args.join(' ');
+   try {
+   let evaled = eval(code);
+   if (!code) {
+   return message.channel.send('Для выполнения команды eval необходим код');
+   }
+   if (typeof evaled !== 'string')
+   evaled = require('util').inspect(evaled)
+   const embed = new Discord.RichEmbed()
+   .setColor(c)
+   .setDescription(`📥 Input: \n \`\`\`${code}\`\`\` \n 📤 Output: \n  \`\`\`${(evaled)}\`\`\``)
+   message.channel.send(`${client.emojis.get(emojis.yes)} Команда успешно выполнена`, embed)
+   message.delete()
+   message.author.send(`${client.emojis.get(emojis.yes)} На случай, если вы потеряли код.`)
+   message.author.send(code)
+   } catch (err) {
+   const embed = new Discord.RichEmbed()
+   .setColor(c)
+   .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
+   message.channel.send(`${client.emojis.get(emojis.no)} При выполнении команды обнаружена ошибка`, embed)
+  }
+  } else if(!message.author.id == "341988428457705482") {
+    const embed = new Discord.RichEmbed()
+    .setTitle("Ошибка")
+    .setDescription(`${client.emojis.get(emojis.no)} У вас нет необходимых прав для выполнения команды.`)
+    .setColor(c)
+    message.channel.send(embed);
+    }
+      
 if (command == 'help' || command == 'помощь') {
     const embed = new Discord.RichEmbed()
     .addField("Эмоции", "``.hug``, ``.slap``, ``.kiss``, ``.pat``, ``.poke``, ``.tickle``, ``.feed``")
