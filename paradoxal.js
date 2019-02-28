@@ -25,7 +25,7 @@ const client  = new Discord.Client();
 var botstatus = "Bot"
 
 // Конфиг
-let p    = '.';
+let p    = '\.';
 let c    = "#a142f4";
 let nsfw = "<#544133935089713167>"
   
