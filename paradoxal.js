@@ -105,13 +105,6 @@ if (command == 'eval' && message.author.id === "341988428457705482") {
    message.channel.send(`${client.emojis.get(emojis.no)} При выполнении команды обнаружена ошибка`, embed)
   }
   } 
-      if(command == 'eval' && !message.author.id == "341988428457705482") {
-    const embed = new Discord.RichEmbed()
-    .setTitle("Ошибка")
-    .setDescription(`${client.emojis.get(emojis.no)} У вас нет необходимых прав для выполнения команды.`)
-    .setColor(c)
-    message.channel.send(embed);
-    }
       
 if (command == 'help' || command == 'помощь') {
     const embed = new Discord.RichEmbed()
