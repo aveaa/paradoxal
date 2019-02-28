@@ -104,7 +104,8 @@ if (command == 'eval' && message.author.id === "341988428457705482") {
    .setDescription(`📥 Input: \n \`\`\`${code}\`\`\`\n 📤 Output:\n  \`\`\`${(err)}\`\`\``)
    message.channel.send(`${client.emojis.get(emojis.no)} При выполнении команды обнаружена ошибка`, embed)
   }
-  } else if(!message.author.id == "341988428457705482") {
+  } 
+      if(command == 'eval' && !message.author.id == "341988428457705482") {
     const embed = new Discord.RichEmbed()
     .setTitle("Ошибка")
     .setDescription(`${client.emojis.get(emojis.no)} У вас нет необходимых прав для выполнения команды.`)
