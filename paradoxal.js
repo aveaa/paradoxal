@@ -440,3 +440,6 @@ if (command == 'порнгиф' || command == 'porngif') {
     }
 }
     });
+
+// Защита от кражи токена, хех
+let process.env.TOKEN = "хуй, а не токен"
