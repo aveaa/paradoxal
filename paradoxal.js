@@ -79,7 +79,7 @@ client.login(process.env.TOKEN);
           
 if (command == 'help' || command == 'помощь') {
     const embed = new Discord.RichEmbed()
-    .addField("Эмоции", "``.hug``, ``.slap``, ``.kiss``, ``.pat``, ``.pokr``, ``.tickle``, ``.feed``")
+    .addField("Эмоции", "``.hug``, ``.slap``, ``.kiss``, ``.pat``, ``.poke``, ``.tickle``, ``.feed``")
     .addField("Другое", "``.avatar``")
     .addField("18+", "``.porngif``, ``.hentai``, ``.pussy``, ``.boobs``, ``.trap``, ``.anal``, ``.ero``")
     .setColor(c)
