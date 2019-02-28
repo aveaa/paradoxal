@@ -77,7 +77,7 @@ client.login(process.env.TOKEN);
         const args = message.content.slice(p.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
           
-if (command == 'eval') && (message.author.id === "341988428457705482") {
+if (command == 'eval' && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
   .setDescription(`${client.emojis.get(emojis.no)} Для выполнения команды необходимо указать код`)
