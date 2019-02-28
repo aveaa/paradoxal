@@ -99,7 +99,7 @@ if (command == 'аватар' || command == 'avatar') {
    await message.channel.send(embed);
    message.delete();
         }
-if (command = 'обнять' || command == 'hug') {
+if (command == 'обнять' || command == 'hug') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/hug')
    let userok = message.mentions.users.first();
