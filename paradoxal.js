@@ -74,21 +74,20 @@ client.login(process.env.TOKEN);
 
 // Основной код:
     client.on('message', async message => {
-        const args = message.content.slice(p.length).trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
+        const args = message.content.slice(p.length).trim().split(" ");
+        const command = args.shift().toUpperCase();
           
-
-if (message.content.startsWith(p + 'help')) {
+if (command == 'help' || command == 'помощь') {
     const embed = new Discord.RichEmbed()
-    .addField("Эмоции", "``.обнять``, ``.ударить``, ``.поцеловать``, ``.погладить``, ``.тыкнуть``, ``.щекотать``, ``.покормить``")
-    .addField("Другое", "``.аватар``")
-    .addField("18+", "``.порнгиф``, ``.хентай``, ``.пусси``, ``.грудь``, ``.трап``, ``.анал``, ``.эротика``")
+    .addField("Эмоции", "``.hug``, ``.slap``, ``.kiss``, ``.pat``, ``.pokr``, ``.tickle``, ``.feed``")
+    .addField("Другое", "``.avatar``")
+    .addField("18+", "``.porngif``, ``.hentai``, ``.pussy``, ``.boobs``, ``.trap``, ``.anal``, ``.ero``")
     .setColor(c)
     .setThumbnail("https://img.icons8.com/nolan/96/000000/help.png")
     message.channel.send(embed);
     }
       
-if (message.content.startsWith(p + `аватар`)) {
+if (command == 'аватар' || command == 'avatar') {
    let userok = message.mentions.users.first();
    if (!userok)
    userok = message.author;    
@@ -100,7 +99,7 @@ if (message.content.startsWith(p + `аватар`)) {
    await message.channel.send(embed);
    message.delete();
         }
-if (message.content.startsWith(p + `обнять`)) {
+if (command = 'обнять' || command == 'hug') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/hug')
    let userok = message.mentions.users.first();
@@ -124,7 +123,7 @@ if (message.content.startsWith(p + `обнять`)) {
                    
         }
 
-if (message.content.startsWith(p + `щекотать`)) {
+if (command == 'щекотать' || command == 'tickle') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/tickle')
    let userok = message.mentions.users.first();
@@ -148,7 +147,7 @@ if (message.content.startsWith(p + `щекотать`)) {
                    
         }
                           
-if (message.content.startsWith(p + `покормить`)) {
+if (command == 'покормить' || command == 'feed') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/feed')
    let userok = message.mentions.users.first();
@@ -172,7 +171,7 @@ if (message.content.startsWith(p + `покормить`)) {
                    
         }
 
-if (message.content.startsWith(p + `тыкнуть`)) {
+if (command == 'тыкнуть' || command == 'poke') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/poke')
    let userok = message.mentions.users.first();
@@ -197,7 +196,7 @@ if (message.content.startsWith(p + `тыкнуть`)) {
         }
 
        
-if (message.content.startsWith(p + `погладить`)) {
+if (command == 'погладить' || command == 'pat') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/pat')
    let userok = message.mentions.users.first();
@@ -221,7 +220,7 @@ if (message.content.startsWith(p + `погладить`)) {
                    
         }
         
-if (message.content.startsWith(p + `ударить`)) {
+if (command == 'ударить' || command == 'slap') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/slap')
    let userok = message.mentions.users.first();
@@ -245,7 +244,7 @@ if (message.content.startsWith(p + `ударить`)) {
                    
         }
 
-if (message.content.startsWith(p + `поцеловать`)) {
+if (command == 'поцеловать' || command == 'kiss') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/kiss')
    let userok = message.mentions.users.first();
@@ -271,7 +270,7 @@ if (message.content.startsWith(p + `поцеловать`)) {
 
         
   
-if (message.content.startsWith(p + `хентай`)) {
+if (command == 'хентай' || command == 'hentai') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -290,7 +289,7 @@ if (message.content.startsWith(p + `хентай`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `эротика`)) {
+if (command == 'эротика' || command == 'ero') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -309,7 +308,7 @@ if (message.content.startsWith(p + `эротика`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `анал`)) {
+if (command == 'анал' || command == 'anal') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -328,7 +327,7 @@ if (message.content.startsWith(p + `анал`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `трап`)) {
+if (command == 'трап' || command == 'trap') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -347,7 +346,7 @@ if (message.content.startsWith(p + `трап`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `грудь`)) {
+if (command == 'грудь' || command == 'boobs') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -366,7 +365,7 @@ if (message.content.startsWith(p + `грудь`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `пусси`)) {
+if (command == 'пусси' || command == 'pussy') {
    const embederr = new Discord.RichEmbed()
    .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
    .setColor(c);
@@ -385,7 +384,7 @@ if (message.content.startsWith(p + `пусси`)) {
    message.delete()
         }
         
-if (message.content.startsWith(p + `порнгиф`)) {
+if (command == 'порнгиф' || command == 'porngif') {
     const embederr = new Discord.RichEmbed()
     .setDescription(`${client.emojis.get(emojis.no)} У данного канала нету метки NSFW. Для использования команды перейдите в ` + nsfw)
     .setColor(c);
