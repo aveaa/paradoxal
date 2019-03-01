@@ -122,17 +122,15 @@ if (command == 'аватар' || command == 'avatar') {
    userok = message.author;    
 
    const embed = new Discord.RichEmbed()
-   .setDescription(`${client.emojis.get(emojis.yes)} Аватар пользователя ${userok}`)
    .setImage(`${userok.avatarURL}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`Аватар пользователя ${userok}`, embed);
    message.delete();
         }
 if (command == 'обнять' || command == 'hug') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/hug')
    let userok = message.mentions.users.first();
-   let description = `${message.author} обнял ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.обнять @пользователь``"
            
@@ -144,10 +142,9 @@ if (command == 'обнять' || command == 'hug') {
            }
                    
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} обнял ${userok} ♡`, embed);
    message.delete();
                    
         }
@@ -156,7 +153,6 @@ if (command == 'щекотать' || command == 'tickle') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/tickle')
    let userok = message.mentions.users.first();
-   let description = `${message.author} пощекотал ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.щекотать @пользователь``"
            
@@ -168,10 +164,9 @@ if (command == 'щекотать' || command == 'tickle') {
            }
                
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} пощекотал ${userok} 😂`, embed);
    message.delete();
                    
         }
@@ -180,7 +175,6 @@ if (command == 'покормить' || command == 'feed') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/feed')
    let userok = message.mentions.users.first();
-   let description = `${message.author} покормил ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.покормить @пользователь``"
            
@@ -192,10 +186,9 @@ if (command == 'покормить' || command == 'feed') {
            }
                    
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} покормил ${userok} 🍔`, embed);
    message.delete();
                    
         }
@@ -204,7 +197,6 @@ if (command == 'тыкнуть' || command == 'poke') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/poke')
    let userok = message.mentions.users.first();
-   let description = `${message.author} тыкнул в ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.тыкнуть @пользователь``"
            
@@ -216,10 +208,9 @@ if (command == 'тыкнуть' || command == 'poke') {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} тыкнул в ${userok}`, embed);
    message.delete();
                    
         }
@@ -229,7 +220,6 @@ if (command == 'погладить' || command == 'pat') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/pat')
    let userok = message.mentions.users.first();
-   let description = `${message.author} погладил ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.погладить @пользователь``"
            
@@ -241,10 +231,9 @@ if (command == 'погладить' || command == 'pat') {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} погладил ${userok}`, embed);
    message.delete();
                    
         }
@@ -253,7 +242,6 @@ if (command == 'ударить' || command == 'slap') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/slap')
    let userok = message.mentions.users.first();
-   let description = `${message.author} ударил ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.ударить @пользователь``"
            
@@ -265,10 +253,9 @@ if (command == 'ударить' || command == 'slap') {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} ненавистно ударил ${userok}`, embed);
    message.delete();
                    
         }
@@ -277,7 +264,6 @@ if (command == 'поцеловать' || command == 'kiss') {
    let r = require('snekfetch')
    let page = await r.get('https://nekos.life/api/v2/img/kiss')
    let userok = message.mentions.users.first();
-   let description = `${message.author} обнял ${userok}`
    if(!userok) {
    error_description = client.emojis.get(emojis.no) + "Вы не упомянули пользователя.\n\nИспользуйте:\n``.поцеловать @пользователь``"
            
@@ -289,10 +275,9 @@ if (command == 'поцеловать' || command == 'kiss') {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setDescription(description)
    .setImage(`${page.body.url}`)
    .setColor(c);
-   await message.channel.send(embed);
+   await message.channel.send(`${message.author} страстно поцеловал ${userok} ♡`, embed);
    message.delete();
                    
         }
