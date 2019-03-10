@@ -77,42 +77,6 @@ client.login(process.env.TOKEN);
         const args = message.content.slice().trim().split(/ +/g);
         const command = args.shift().toLowerCase();
           
-if(command == `${p}vote` || `${p}голосование`) {
-// Переменные
- var votetext = args.join(" ")
- var chnl = message.guild.channels.find('name', 'votes')
- 
-// Эмбеды
-const voteembed = new Discord.RichEmbed()
-.setAuthor(`${message.author.tag}`, message.author.avatarURL)
-.setTitle('Голосование')
-.setDescription(args.join(' '))
-.setColor(c)
-.setFooter('Paradoxal Votes')
-
-const errembed = new Discord.RichEmbed()
-.setTitle('Ошибка')
-.setDescription(`${client.emojis.get(emojis.no)} Вы не указали текст голосованиия.`)
-.setColor(c)
-.setFooter('Paradoxal Votes')
-
-const yesembed = new Discord.RichEmbed()
-.setTitle('Выполнено')
-.setDescription(`${client.emojis.get(emojis.yes)} Голосование успешно начато`)
-.setColor(c)
-
-// Ошибки и отправление голосования
-if(!votetext || votetext == " ") {
-   message.channel.send(errembed).then(msg => msg.delete(5000))
-   }
-   
-  else {
-   chnl.send(voteembed).then(msg => { msg.react('548538686237704202')
-                                                                   msg.react('548538689572175902')
-                                                                   });
-  return message.channel.send(yesembed).then(msg => msg.delete(5000))
-      }
-  }
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
