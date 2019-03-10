@@ -102,7 +102,7 @@ const yesembed = new Discord.RichEmbed()
 .setColor(c)
 
 // Ошибки
-if(!votetext) {
+if(!args.join) {
    message.channel.send(errembed).then(msg => msg.delete(5000))
    }
    
