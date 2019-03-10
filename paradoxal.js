@@ -84,7 +84,7 @@ if(command == `${p}vote` || `${p}голосование`) {
  
 // Эмбеды
 const voteembed = new Discord.RichEmbed()
-.setAuthor(`${message.author.nickname}#${message.author.tag}`, message.author.avatarURL)
+.setAuthor(`${message.author.tag}`, message.author.avatarURL)
 .setTitle('Голосование')
 .setDescription(args.join(' '))
 .setColor(c)
