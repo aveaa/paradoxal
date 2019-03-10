@@ -112,7 +112,7 @@ if(!votetext) {
                   webhook.delete();
                    await msg.react('548538686237704202')
                    await msg.react('548538689572175902')
-                                                                   });
+                                                                   })
                                                   });
   return message.channel.send(yesembed).then(msg => msg.delete(5000))
   }
