@@ -84,6 +84,7 @@ if(command == `${p}vote` || `${p}голосование`) {
  
 // Эмбеды
 const voteembed = new Discord.RichEmbed()
+.setAuthor(`${message.author.nickname}#${message.author.tag}`, message.author.avatarURL)
 .setTitle('Голосование')
 .setDescription(args.join(' '))
 .setColor(c)
@@ -107,17 +108,12 @@ if(!votetext) {
    
 // Отправка голосования
    else {
-   chnl.createWebhook(message.author.username, message.author.avatarURL).then(webhook => {
-            webhook.send('', {embeds: [voteembed]}).then(async (msg) => {
-                  webhook.delete();
-                   await msg.react('548538686237704202')
-                   await msg.react('548538689572175902')
-                                                                   })
-                                                  });
+   chnl.send(voteembed).then(msg => { msg.react('548538686237704202')
+                                                                   msg.react('548538689572175902')
+                                                                   });
+                                                  }
   return message.channel.send(yesembed).then(msg => msg.delete(5000))
-     }
-  }
-      
+  }      
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
