@@ -101,17 +101,18 @@ const yesembed = new Discord.RichEmbed()
 .setDescription(`${client.emojis.get(emojis.yes)} Голосование успешно начато`)
 .setColor(c)
 
-// Ошибки
+// Ошибки и отправление голосования
 if(!votetext || votetext == " ") {
    message.channel.send(errembed).then(msg => msg.delete(5000))
    }
    
-// Отправка голосования
+  else {
    chnl.send(voteembed).then(msg => { msg.react('548538686237704202')
                                                                    msg.react('548538689572175902')
                                                                    });
   return message.channel.send(yesembed).then(msg => msg.delete(5000))
       }
+  }
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
