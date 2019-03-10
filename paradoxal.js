@@ -107,13 +107,11 @@ if(!args.join) {
    }
    
 // Отправка голосования
-   else {
    chnl.send(voteembed).then(msg => { msg.react('548538686237704202')
                                                                    msg.react('548538689572175902')
                                                                    });
                                                   }
   return message.channel.send(yesembed).then(msg => msg.delete(5000))
-  }      
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
