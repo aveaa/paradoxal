@@ -122,9 +122,9 @@ if (command == `${p}аватар` || command == `${p}avatar`) {
    userok = message.author;    
 
    const embed = new Discord.RichEmbed()
+   .setAuthor(`Paradoxal | ${p}avatar`, message.guild.iconURL)
    .setImage(`${userok.avatarURL}`)
    .setColor(c);
-   .setAuthor(`Paradoxal | ${p}avatar `, message.guild.iconURL)
    await message.channel.send(`Аватар пользователя ${userok}`, embed);
    message.delete();
         }
