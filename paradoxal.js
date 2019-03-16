@@ -113,7 +113,6 @@ if (command == `${p}help` || command == `${p}помощь`) {
     .addField("18+", "``.porngif``, ``.hentai``, ``.pussy``, ``.boobs``, ``.trap``, ``.anal``, ``.ero``")
     .setColor(c)
     .setThumbnail("https://img.icons8.com/nolan/96/000000/help.png")
-    .setAuthor(`Paradoxal | ${p}help`, message.guild.iconURL)
     message.channel.send(embed);
     }
       
@@ -124,7 +123,6 @@ if (command == `${p}аватар` || command == `${p}avatar`) {
 
    const embed = new Discord.RichEmbed()
    .setImage(`${userok.avatarURL}`)
-   .setAuthor(`Paradoxal | ${p}avatar`, message.guild.iconURL)
    .setColor(c);
    await message.channel.send(`Аватар пользователя ${userok}`, embed);
    message.delete();
