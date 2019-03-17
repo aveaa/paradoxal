@@ -1,2 +1,5 @@
 # Paradoxal
-Основной бот для сервера **"Paradoxal"**. Разрешается к использованию на других серверах.
+Основной бот для сервера **"Paradoxal"**. Разрешается использовать на других серверах.
+
+# Moderator
+Репозиторий Paradoxal Mod: [тык](https://github.com/psychicfreezer/paradoxalmod)
