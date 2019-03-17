@@ -60,8 +60,7 @@ client.on('ready', () => {
 // Удаление сообщения
 client.on('messageDelete', message => { 
           const embed = new Discord.RichEmbed()
-          .setAuthor(`${message.author.username}#${message.author.tag}`, `${message.author.avatarURL}`)
-          .setTitle("Удалено сообщение!")
+          .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
           .setDescription(`${message.cleanContent}`)
           .setTimestamp()
           .setColor(c)
