@@ -4,4 +4,4 @@
 Сервер: [тык](https://discord.gg/GZ8ehhH)
 
 # Moderator
-Репозиторий Paradoxal Mod: [тык](https://github.com/psychicfreezer/paradoxalmod)
+Репозиторий Paradoxal Mod: [тык](https://github.com/psychicfreezer/paradoxalmoderator)
