@@ -55,30 +55,7 @@ client.on('ready', () => {
         let rstatus = Math.floor(Math.random() * status.length);
         client.user.setActivity(status[rstatus], {type: 3});
  }; setInterval(randomStatus, 10000)
-});
-
-// Логи
-
-// Удаление сообщения
-client.on('messageDelete', message => { 
-          const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
-          .addField("Содержимое:", message.cleanContent)
-          .setTimestamp()
-          .setColor(denyc)
-    client.channels.get("546636889189384193").send(embed);
-});
-
-client.on('messageUpdate', (oldMessage, newMessage) => { 
-          const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
-          .addField("До:", oldMessage.content)
-          .addField("После:", newMessage.content)
-          .setTimestamp()
-          .setColor(agreec)
-    client.channels.get("546636889189384193").send(embed);
-});
- 
+}); 
 
 // Авторизация
 client.login(process.env.TOKEN);
@@ -88,6 +65,29 @@ client.login(process.env.TOKEN);
         const args = message.content.slice().trim().split(/ +/g);
         const command = args.shift().toLowerCase();
           
+
+// Логи
+
+// Удаление сообщения
+client.on('messageDelete', message => { 
+          const embed = new Discord.RichEmbed()
+          .setAuthor(`Пользователь ${message.author.tag} удалил(а) сообщение`, `${message.author.avatarURL}`)
+          .addField("Содержимое:", message.cleanContent)
+          .setTimestamp()
+          .setColor(denyc)
+    client.channels.get("546636889189384193").send(embed);
+});
+
+client.on('messageUpdate', (oldMessage, newMessage) => { 
+          const embed = new Discord.RichEmbed()
+          .setAuthor(`Пользователь ${message.author.tag} изменил(а) сообщение`, `${message.author.avatarURL}`)
+          .addField("До:", oldMessage.content)
+          .addField("После:", newMessage.content)
+          .setTimestamp()
+          .setColor(agreec)
+    client.channels.get("546636889189384193").send(embed);
+});
+      
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
   const noeval = new Discord.RichEmbed()
