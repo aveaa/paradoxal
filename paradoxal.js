@@ -60,15 +60,6 @@ client.on('ready', () => {
 // Авторизация
 client.login(process.env.TOKEN);
 
-// Основной код:
-    client.on('message', async message => {
-        const args = message.content.slice().trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
-          
-
-// Логи
-
-// Удаление сообщения
 client.on('messageDelete', message => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} удалил(а) сообщение`, `${message.author.avatarURL}`)
@@ -77,6 +68,11 @@ client.on('messageDelete', message => {
           .setColor(denyc)
     client.channels.get("546636889189384193").send(embed);
 });
+
+// Основной код:
+    client.on('message', async message => {
+        const args = message.content.slice().trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
 
 client.on('messageUpdate', (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
