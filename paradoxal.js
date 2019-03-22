@@ -72,8 +72,8 @@ client.on('messageDelete', message => {
 client.on('messageUpdate', (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
-          .addField("До:", oldMessage)
-          .addField("После:", newMessage)
+          .addField("До:", oldMessage.content)
+          .addField("После:", newMessage.content)
           .setTimestamp()
           .setColor(agreec)
     client.channels.get("546636889189384193").send(embed);
