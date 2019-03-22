@@ -25,9 +25,11 @@ const client  = new Discord.Client();
 var botstatus = "Bot"
 
 // Конфиг
-let p    = '\.';
-let c    = "#fa6402";
-let nsfw = "<#544133935089713167>"
+let p      = '\.';
+let c      = "#fa6402";
+let denyc  = "#dd4451";
+let agreec = "#97f27b";
+let nsfw   = "<#544133935089713167>"
   
 // Глобальные эмодзи
 const emojis = {
@@ -61,9 +63,19 @@ client.on('ready', () => {
 client.on('messageDelete', message => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
-          .setDescription(`${message.cleanContent}`)
+          .addField("Содержимое:", message.cleanContent)
           .setTimestamp()
-          .setColor(c)
+          .setColor(denyc)
+    client.channels.get("546636889189384193").send(embed);
+});
+
+client.on('messageDelete', message => { 
+          const embed = new Discord.RichEmbed()
+          .setAuthor(`Пользователь ${message.author.tag} удалил сообщение`, `${message.author.avatarURL}`)
+          .addField("До:", oldMessage)
+          .addField("После:", newMessage)
+          .setTimestamp()
+          .setColor(agreec)
     client.channels.get("546636889189384193").send(embed);
 });
  
@@ -121,7 +133,7 @@ if (command == `${p}аватар` || command == `${p}avatar`) {
    userok = message.author;    
 
    const embed = new Discord.RichEmbed()
-   .setImage(`${userok.avatarURL}`)
+   .setImage(userok.avatarURL)
    .setColor(c);
    await message.channel.send(`Аватар пользователя ${userok}`, embed);
    message.delete();
@@ -141,7 +153,7 @@ if (command == 'обнять' || command == 'hug') {
            }
                    
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} обнял ${userok} ♡`, embed);
    message.delete();
@@ -163,7 +175,7 @@ if (command == `${p}щекотать` || command == `${p}tickle`) {
            }
                
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} пощекотал ${userok} 😂`, embed);
    message.delete();
@@ -185,7 +197,7 @@ if (command == `${p}покормить` || command == `${p}feed`) {
            }
                    
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} покормил ${userok} 🍔`, embed);
    message.delete();
@@ -207,7 +219,7 @@ if (command == `${p}тыкнуть` || command == `${p}poke`) {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} тыкнул в ${userok}`, embed);
    message.delete();
@@ -230,7 +242,7 @@ if (command == `${p}погладить` || command == `${p}pat`) {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} погладил ${userok}`, embed);
    message.delete();
@@ -252,7 +264,7 @@ if (command == `${p}ударить` || command == `${p}slap`) {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} ненавистно ударил ${userok}`, embed);
    message.delete();
@@ -274,7 +286,7 @@ if (command == `${p}поцеловать` || command == `${p}kiss`) {
            }
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(`${message.author} страстно поцеловал ${userok} ♡`, embed);
    message.delete();
@@ -296,7 +308,7 @@ if (command == `${p}хентай` || command == `${p}hentai`) {
    let page = await r.get('https://nekos.life/api/v2/img/hentai');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
@@ -315,7 +327,7 @@ if (command == `${p}эротика` || command == `${p}ero`) {
    let page = await r.get('https://nekos.life/api/v2/img/ero');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
@@ -334,7 +346,7 @@ if (command == `${p}анал` || command == `${p}anal`) {
    let page = await r.get('https://nekos.life/api/v2/img/anal');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
@@ -353,7 +365,7 @@ if (command == `${p}трап` || command == `${p}trap`) {
    let page = await r.get('https://nekos.life/api/v2/img/trap');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
@@ -372,7 +384,7 @@ if (command == `${p}грудь` || command == `${p}boobs`) {
    let page = await r.get('https://nekos.life/api/v2/img/tits');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
@@ -391,7 +403,7 @@ if (command == `${p}пусси` || command == `${p}pussy`) {
    let page = await r.get('https://nekos.life/api/v2/img/pussy');
                     
    const embed = new Discord.RichEmbed()
-   .setImage(`${page.body.url}`)
+   .setImage(page.body.url)
    .setColor(c);
    await message.channel.send(embed);
    message.delete()
