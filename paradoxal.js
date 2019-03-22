@@ -6,7 +6,7 @@
 *
 *
 * Бот, созданный специально для сервера Paradoxal 
-* Библиотеки | Discord.js | Request
+* Библиотеки | Discord.js | Request | Node-Schedule
 * Ссылка на дискорд | https://discord.gg/9gAxxx
 * Разрешается использовать на вашем сервере
 *
@@ -19,6 +19,7 @@
 // Библиотеки
 const Discord = require('discord.js');
 const request = require('request');
+const schedule = require('node-schedule');
 
 // Клиент
 const client  = new Discord.Client();
