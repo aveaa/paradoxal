@@ -6,7 +6,7 @@
 *
 *
 * Бот, созданный специально для сервера Paradoxal 
-* Библиотеки | Discord.js | Request | Node-Schedule
+* Библиотеки | Discord.js | Request 
 * Ссылка на дискорд | https://discord.gg/9gAxxx
 * Разрешается использовать на вашем сервере
 *
@@ -19,7 +19,6 @@
 // Библиотеки
 const Discord = require('discord.js');
 const request = require('request');
-const schedule = require('node-schedule');
 
 // Клиент
 const client  = new Discord.Client();
@@ -38,21 +37,6 @@ const emojis = {
 
 // Ивент при запуске бота 👤
 client.on('ready', () => {
-     var rule = new schedule.RecurrenceRule(); 
-     rule.hour = 22;
-     rule.minute = 0;
-
-var j = schedule.scheduleJob(rule, function(){
-     client.channels.get("558743380641841164").edit({ name: "「🌙」night-chat" })
-}); 
-  
-     var rule = new schedule.RecurrenceRule(); 
-     rule.hour = 6;
-     rule.minute = 0;
-
-var j = schedule.scheduleJob(rule, function(){
-     client.channels.get("558743380641841164").edit({ name: "「💬」general-chat" })
-}); 
     console.log('//--------------------//');
     console.log(' ');
     console.log('Бот успешно запущен');
