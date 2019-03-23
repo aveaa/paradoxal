@@ -57,27 +57,6 @@ client.on('ready', () => {
  }; setInterval(randomStatus, 10000)
 }); 
 
-client.on('messageDelete', message => { 
-          const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${message.author.tag} удалил(а) сообщение`, `${message.author.avatarURL}`)
-          .setDescription(`**Автор: ${message.author.tag}
-В канале: ${message.channel}**`)
-          .addField("Содержимое:", message.cleanContent)
-          .setTimestamp()
-          .setColor(denyc)
-    client.channels.get("546636889189384193").send(embed);
-});
-
-client.on('messageUpdate', (oldMessage, newMessage) => { 
-          const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${nmssage.author.tag} изменил(а) сообщение`, `${message.author.avatarURL}`)
-          .addField("До:", oldMessage)
-          .addField("После:", newMessage)
-          .setTimestamp()
-          .setColor(agreec)
-    client.channels.get("546636889189384193").send(embed);
-});
-
 // Авторизация
 client.login(process.env.TOKEN);
 
