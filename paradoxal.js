@@ -69,11 +69,6 @@ client.on('messageDelete', message => {
     client.channels.get("546636889189384193").send(embed);
 });
 
-// Основной код:
-    client.on('message', async message => {
-        const args = message.content.slice().trim().split(/ +/g);
-        const command = args.shift().toLowerCase();
-
 client.on('messageUpdate', (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} изменил(а) сообщение`, `${message.author.avatarURL}`)
@@ -83,6 +78,11 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
           .setColor(agreec)
     client.channels.get("546636889189384193").send(embed);
 });
+
+// Основной код:
+    client.on('message', async message => {
+        const args = message.content.slice().trim().split(/ +/g);
+        const command = args.shift().toLowerCase();
       
 if (command == `${p}eval` && message.author.id === "341988428457705482") {
   // Эмбед .-.
