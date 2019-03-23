@@ -60,8 +60,8 @@ client.on('ready', () => {
 client.on('messageDelete', message => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} удалил(а) сообщение`, `${message.author.avatarURL}`)
-          .setDescription(`Автор: ${message.author.tag}
-В канале: ${message.channel}`)
+          .setDescription(`**Автор: ${message.author.tag}
+В канале: ${message.channel}**`)
           .addField("Содержимое:", message.cleanContent)
           .setTimestamp()
           .setColor(denyc)
@@ -70,9 +70,9 @@ client.on('messageDelete', message => {
 
 client.on('messageUpdate', (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${newMessage.author.tag} изменил(а) сообщение`, `${newMessage.author.avatarURL}`)
-          .addField("До:", oldMessage.content)
-          .addField("После:", newMessage.content)
+          .setAuthor(`Пользователь ${nmssage.author.tag} изменил(а) сообщение`, `${message.author.avatarURL}`)
+          .addField("До:", oldMessage)
+          .addField("После:", newMessage)
           .setTimestamp()
           .setColor(agreec)
     client.channels.get("546636889189384193").send(embed);
