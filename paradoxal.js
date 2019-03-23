@@ -70,7 +70,7 @@ client.on('messageDelete', message => {
 
 client.on('messageUpdate', (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
-          .setAuthor(`Пользователь ${newMessage.author.tag} изменил(а) сообщение`, newMessage.author.avatarURL)
+          .setAuthor(`Пользователь ${newMessage.author.tag} изменил(а) сообщение`, `${newMessage.author.avatarURL}`)
           .addField("До:", oldMessage.content)
           .addField("После:", newMessage.content)
           .setTimestamp()
