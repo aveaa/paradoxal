@@ -66,7 +66,7 @@ client.on('messageDelete', message => {
     client.channels.get("546636889189384193").send(embed);
 });
 
-client.on('messageUpdate', message, (oldMessage, newMessage) => { 
+client.on('messageUpdate', message & (oldMessage, newMessage) => { 
           const embed = new Discord.RichEmbed()
           .setAuthor(`Пользователь ${message.author.tag} изменил(а) сообщение`, `${message.author.avatarURL}`)
           .addField("До:", oldMessage.content)
